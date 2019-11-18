@@ -51,7 +51,7 @@ class ZshEncryptPlugin {
   //RSA公钥解密
   static Future<String> rsa_public_decrptString(String txt,String publicKey,String tag)async{
     try{
-      final String result = await _channel.invokeMethod('decrypt_private_rsa',{"decryptString":txt,"rsaKey":publicKey,"tag":tag});
+      final String result = await _channel.invokeMethod('decrypt_public_rsa',{"decryptString":txt,"rsaKey":publicKey,"tag":tag});
       return result;
     }on PlatformException catch(e){
       throw "Failed to get String decode: '${e.message}";

@@ -4,16 +4,15 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'zsh_encrypt_plugin'
-  s.version          = '0.0.2'
+  s.version          = '0.0.5'
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC
 A new flutter plugin project.
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'zsh' => 'zh818ai@163.com' }
   s.source           = { :path => '.' }
-  s.swift_version    = '4.0'
 
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'

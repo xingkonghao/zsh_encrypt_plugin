@@ -38,7 +38,7 @@
     }else if([@"encrypt_public_rsa" isEqualToString:call.method])
     {
         NSString *rsaKey = argsMap[@"rsaKey"];
-        NSString *rsaString = argsMap[@"rsaString"];
+        NSString *rsaString = argsMap[@"encryptString"];
         NSString *tag = argsMap[@"tag"];
         NSString *rsaData = [SecurityHelper encryptString:rsaString?:@"" withSecurityType:SecurityType_RSA withKey:rsaKey?:@"" withTag:tag?:@""];
         if(rsaData)
@@ -54,7 +54,7 @@
     }else if([@"encrypt_private_rsa" isEqualToString:call.method])
          {
              NSString *rsaKey = argsMap[@"rsaKey"];
-             NSString *rsaString = argsMap[@"rsaString"];
+             NSString *rsaString = argsMap[@"encryptString"];
              NSString *tag = argsMap[@"tag"];
              NSString *rsaData = [SecurityHelper encryptString:rsaString?:@"" withSecurityType:SecurityType_RSA withKey:rsaKey?:@"" withTag:tag?:@""];
              if(rsaData)
